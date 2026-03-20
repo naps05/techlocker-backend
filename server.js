@@ -10,7 +10,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: [
+    'http://localhost:4200',
+    'https://techlocker-frontend.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
